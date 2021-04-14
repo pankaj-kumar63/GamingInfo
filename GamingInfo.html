@@ -140,9 +140,9 @@
         }
 
 
-        /* .bottom-navigation {
+        .bottom-navigation {
             display: none;
-        } */
+        }
 
         @media only screen and (max-width:600px) {
             .tabs {
@@ -169,15 +169,15 @@
 
             .images-of-senstivity-of-pubg-mobile {
                 align-items: center;
-                margin: 13px 30px;
+                margin:30px;       /*/changes/*/
                 position: relative;
-                top: 31vh;
+                top: 28vh;         /*/changes/*/
                 left: 2vw;
                 overflow: initial;
                 white-space: normal;
-                border: 2px solid green;
+                /* border: 2px solid green; */
                 width: fit-content;
-                margin-bottom: 3px;
+                margin-bottom: 40px;
             }
 
             .images-of-senstivity-of-pubg-mobile img {
@@ -203,13 +203,30 @@
                 position: relative;
                 display: block;
                 border: 1px solid black;
-                margin: 0 auto;
+                margin: 25px auto;   /*/changes/*/
                 width: 300px;
-                height: 25px;
+                height: auto;
                 overflow: auto;
                 white-space: nowrap;
             }
-
+            .bottom-navigation {
+                    /* border: 1px solid red; */
+                    position: fixed;
+                    bottom: 0%;
+                    text-align: center;
+                    display: block;
+                    position: fixed;
+                    left: 50%;
+                    width: 100vw;
+                    transform: translateX(-50%);
+    
+                }
+    
+                .bottom-navigation span {
+                    padding: 30px;
+                    font-size: 45px;
+                    color: rgb(214, 207, 207);
+                }
 
 
         }
@@ -778,7 +795,15 @@
         </div>
         </div>
     </section>
+<header>
+    <div class="bottom-navigation">
+            
+        <span style="color: #ccc"><i class="fa fa-home"></i></span>
+        <span style="color: red;"><i class="fa fa-youtube-play"></i></span>
+        <span style="color: #ccc"><i class="fa fa-caret-up"></i></span>
 
+    </div>
+</header>
 
 
     <script type="text/javascript">
