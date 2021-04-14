@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Gaming Info</title>
     <style>
         * {
@@ -74,13 +76,12 @@
         .container .senitivity-of-pubg-mobile-gamer li:hover {
             background-color: #ddd;
         }
-
-        .container .senitivity-of-pubg-mobile-gamer li a {
-            color: rgb(58, 55, 55);
-            text-decoration: none;
+        .container .senitivity-of-pubg-mobile-gamer li.activate {
+            background-color: red;
         }
 
         .images-of-senstivity-of-pubg-mobile {
+            display: none;
             overflow: auto;
             white-space: nowrap;
             position: absolute;
@@ -134,8 +135,14 @@
         #pubg-mobile {
             display: block;
         }
+        #scoutop {
+            display: block;
+        }
 
 
+        /* .bottom-navigation {
+            display: none;
+        } */
 
         @media only screen and (max-width:600px) {
             .tabs {
@@ -161,11 +168,10 @@
             }
 
             .images-of-senstivity-of-pubg-mobile {
-                display: block;
                 align-items: center;
                 margin: 13px 30px;
                 position: relative;
-                top: 26vh;
+                top: 40vh;
                 left: 0vw;
                 overflow: initial;
                 white-space: normal;
@@ -202,6 +208,8 @@
                 white-space: nowrap;
             }
 
+
+
         }
 
         @media (min-width:348px) and (max-width:600px) {
@@ -216,8 +224,7 @@
 
     <div class="tabs">
 
-        <button class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')"
-            id="button1">PUBG-Mobile</button>
+        <button class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')"id="button1">PUBG-Mobile</button>
         <button class="bttn" onclick="show_para('free-fire','button2','bttn')" id="button2">FREE FIRE</button>
         <button class="bttn" onclick="show_para('call-of-duty-mobile','button3','bttn')" id="button3">COD</button>
         <button class="bttn" onclick="show_para('pubg-mobile-lite','button4','bttn')" id="button4">PUBGM Lite</button>
@@ -267,16 +274,58 @@
                 <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
+                        <li class="btn activate" onclick="showImageSensitivity('scoutop','buttn1','btn')" id="buttn1">Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','buttn2','btn')" id="buttn2">Soul Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','buttn3','btn')" id="buttn3">Hydra Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','buttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','buttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','buttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Hydra Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','buttn8','btn')" id="buttn8">Hydra Wrath</li>
                     </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
@@ -284,27 +333,72 @@
                     </div>
                 </div>
             </div>
-
             <div class="pannel" id="free-fire">
-
                 <ul class="individual-info">
                     <a href="">Updates</a>
                     <a href="">News</a>
                     <a href="">Download Link</a>
                 </ul>
-                <h2>Sensitivity of Some famous FREE-FIRE gamer</h2><br>
+                <h2>Sensitivity of Some famous FREE-FIRE mobile gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
                     </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
@@ -312,127 +406,7 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="pannel" id="call-of-duty-mobile">
-
-                <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="">News</a>
-                    <a href="">Download Link</a>
-                </ul>
-                <h2>Sensitivity of Some famous COD gamer</h2><br>
-                <div class="images-of-player">
-                    <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
-                    </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="pannel" id="pubg-mobile-lite">
-
-                <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="">News</a>
-                    <a href="">Download Link</a>
-                </ul>
-                <h2>Sensitivity of Some famous PUBGM Lite mobile gamer</h2><br>
-                <div class="images-of-player">
-                    <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
-                    </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="pannel" id="glitches">
-
-                <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="">News</a>
-                    <a href="">Download Link</a>
-                </ul>
-                <h2>Sensitivity of Some famous GLITCHES mobile gamer</h2><br>
-                <div class="images-of-player">
-                    <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
-                    </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="pannel" id="facts">
-
-                <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="">News</a>
-                    <a href="">Download Link</a>
-                </ul>
-                <h2>Sensitivity of Some famous FACTS mobile gamer</h2><br>
-                <div class="images-of-player">
-                    <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
-                    </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                        <img src="./img/background-3390802_1920.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="pannel" id="tricks">
-
                 <ul class="individual-info">
                     <a href="">Updates</a>
                     <a href="">News</a>
@@ -441,16 +415,355 @@
                 <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li><a href="">Sc0utOP</a></li>
-                        <li><a href="">Soul Mortal</a></li>
-                        <li><a href="">Hydra Dynamo</a></li>
-                        <li><a href="">Athena</a></li>
-                        <li><a href="">Levihno</a></li>
-                        <li><a href="">Sevou</a></li>
-                        <li><a href="">Hydra Danger</a></li>
-                        <li><a href="">Hydra Wrath</a></li>
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
                     </div>
-                    <div class="images-of-senstivity-of-pubg-mobile">
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pannel" id="pubg-mobile-lite">
+                <ul class="individual-info">
+                    <a href="">Updates</a>
+                    <a href="">News</a>
+                    <a href="">Download Link</a>
+                </ul>
+                <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
+                <div class="images-of-player">
+                    <div class="senitivity-of-pubg-mobile-gamer">
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pannel" id="glitches">
+                <ul class="individual-info">
+                    <a href="">Updates</a>
+                    <a href="">News</a>
+                    <a href="">Download Link</a>
+                </ul>
+                <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
+                <div class="images-of-player">
+                    <div class="senitivity-of-pubg-mobile-gamer">
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pannel" id="facts">
+                <ul class="individual-info">
+                    <a href="">Updates</a>
+                    <a href="">News</a>
+                    <a href="">Download Link</a>
+                </ul>
+                <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
+                <div class="images-of-player">
+                    <div class="senitivity-of-pubg-mobile-gamer">
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pannel" id="tricks">
+                <ul class="individual-info">
+                    <a href="">Updates</a>
+                    <a href="">News</a>
+                    <a href="">Download Link</a>
+                </ul>
+                <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
+                <div class="images-of-player">
+                    <div class="senitivity-of-pubg-mobile-gamer">
+                        <li class="btn active" onclick="showImageSensitivity('scoutop','bttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','bttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','bttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
+                        <li class="btn" onclick="showImageSensitivity('athena','bttn4','btn')" id="buttn4">Athena</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','bttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('sevou','bttn6','btn')" id="buttn6">Sevou</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','bttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','bttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="soul-mortal">
+                        <img src="./img/bg.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-dynamo">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="athena">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="levinho">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="sevou">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-danger">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                    </div>
+                    <div class="images-of-senstivity-of-pubg-mobile" id="hydra-wrath">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
@@ -459,12 +772,12 @@
                 </div>
             </div>
 
-
-
         </div>
         </div>
         </div>
     </section>
+
+
 
     <script type="text/javascript">
 
@@ -481,24 +794,39 @@
             document.getElementById(curEle).style.display = "block";
             document.getElementById(btn).classList.add('active');
 
+        }
+
+
+        function showImageSensitivity(currentEle, btttn, clss) {
+            var bttn = document.getElementsByClassName(clss);
+
+            var pannel = document.getElementsByClassName('images-of-senstivity-of-pubg-mobile')
+            for (let i = 0; i < pannel.length; i++) {
+                const element = pannel[i];
+                element.style.display = "none";
+                bttn[i].className = bttn[i].className.replace("activate", "");
+
+            }
+            document.getElementById(currentEle).style.display = "block";
+            document.getElementById(btttn).classList.add('activate');
 
         }
 
 
         var slideIndex = 0;
-showSlides();
+        showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("inspirational-quotes");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("inspirational-quotes");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
 
     </script>
 
