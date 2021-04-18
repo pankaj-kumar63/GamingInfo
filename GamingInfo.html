@@ -13,6 +13,13 @@
             margin: 0;
             padding: 0;
         }
+        body{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            /* margin: 5px; */
+            padding: 1px;
+        }
 
         .active {
             background-color: #5fbd62;
@@ -76,18 +83,21 @@
         .container .senitivity-of-pubg-mobile-gamer li:hover {
             background-color: #ddd;
         }
+
         .container .senitivity-of-pubg-mobile-gamer li.activate {
             background-color: red;
         }
 
         .images-of-senstivity-of-pubg-mobile {
+            box-sizing: border-box;
             display: none;
             overflow: auto;
             white-space: nowrap;
             position: absolute;
-            top: 70vh;
-            right: 15vw;
-            width: 400px;
+            top: 60vh;
+            right: 20vw;
+            width: 500px;
+            height: 300px;
             /* border: 2px solid yellow; */
             /* width: fit-content; */
             transform: translateY(-50%);
@@ -95,8 +105,9 @@
 
 
         .images-of-senstivity-of-pubg-mobile img {
-            width: 400px;
-            height: 200px;
+            box-sizing: border-box;
+            width: 500px;
+            height: 300px;
             display: inline-block;
             border: 1px solid rgb(226, 221, 221);
             padding: 5px;
@@ -135,27 +146,26 @@
         #pubg-mobile {
             display: block;
         }
+
         #scoutop {
             display: block;
         }
 
-
-        .bottom-navigation {
-            display: none;
-        }
-
-        @media only screen and (max-width:600px) {
+        @media only screen and (max-width:768px) {
             .tabs {
                 width: 119vw;
             }
 
             .pannel {
+                margin: 3px auto;
                 margin: 3px;
                 position: absolute;
                 text-align: center;
-                overflow: hidden;
-                height: fit-content;
-                width: 109vw;
+                overflow: auto;
+                height: 100vh;
+                width: 115vw;
+                overflow: auto;
+                /* white-space: nowrap; */
             }
 
             .pannel .individual-info {
@@ -168,23 +178,27 @@
             }
 
             .images-of-senstivity-of-pubg-mobile {
+                box-sizing: border-box;
                 align-items: center;
-                margin:30px;       /*/changes/*/
+                margin: 30px;
+                /*/changes/*/
                 position: relative;
-                top: 28vh;         /*/changes/*/
+                top: 35vh;
+                /*/changes/*/
                 left: 2vw;
-                overflow: initial;
-                white-space: normal;
-                /* border: 2px solid green; */
+                overflow: auto;
+                height: 75vh;
+                white-space: nowrap;
+                border: 2px solid rgb(224, 17, 86);
                 width: fit-content;
                 margin-bottom: 40px;
             }
 
             .images-of-senstivity-of-pubg-mobile img {
                 display: block;
-                position: relative;
+                position:relative;
                 margin: 0 auto;
-                height: 90px;
+                height: 200px;
                 width: 90vw;
                 padding: 0;
             }
@@ -203,30 +217,32 @@
                 position: relative;
                 display: block;
                 border: 1px solid black;
-                margin: 25px auto;   /*/changes/*/
+                margin: 25px auto;
+                /*/changes/*/
                 width: 300px;
                 height: auto;
                 overflow: auto;
                 white-space: nowrap;
             }
+
             .bottom-navigation {
-                    /* border: 1px solid red; */
-                    position: fixed;
-                    bottom: 0%;
-                    text-align: center;
-                    display: block;
-                    position: fixed;
-                    left: 50%;
-                    width: 100vw;
-                    transform: translateX(-50%);
-    
-                }
-    
-                .bottom-navigation span {
-                    padding: 30px;
-                    font-size: 45px;
-                    color: rgb(214, 207, 207);
-                }
+                /* border: 1px solid red; */
+                position: fixed;
+                bottom: 0%;
+                text-align: center;
+                display: block;
+                position: fixed;
+                left: 50%;
+                width: 100vw;
+                transform: translateX(-50%);
+
+            }
+
+            .bottom-navigation span .fa{
+                padding: 30px;
+                font-size: 45px;
+                color: rgb(194, 63, 63);
+            }
 
 
         }
@@ -235,11 +251,8 @@
             .pannel {
                 width: 112vw;
             }
-            .images-of-senstivity-of-pubg-mobile{
-                top:26vh;
-                            }
-        }
 
+        }
     </style>
 </head>
 
@@ -247,7 +260,8 @@
 
     <div class="tabs">
 
-        <button class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')"id="button1">PUBG-Mobile</button>
+        <button class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')"
+            id="button1">PUBG-Mobile</button>
         <button class="bttn" onclick="show_para('free-fire','button2','bttn')" id="button2">FREE FIRE</button>
         <button class="bttn" onclick="show_para('call-of-duty-mobile','button3','bttn')" id="button3">COD</button>
         <button class="bttn" onclick="show_para('pubg-mobile-lite','button4','bttn')" id="button4">PUBGM Lite</button>
@@ -291,22 +305,31 @@
             <div class="pannel" id="pubg-mobile">
                 <ul class="individual-info">
                     <a href="">Updates</a>
-                    <a href="">News</a>
+                    <a href="./news.html">News</a>
                     <a href="">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li class="btn activate" onclick="showImageSensitivity('scoutop','buttn1','btn')" id="buttn1">Sc0utOP</li>
-                        <li class="btn" onclick="showImageSensitivity('soul-mortal','buttn2','btn')" id="buttn2">Soul Mortal</li>
-                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','buttn3','btn')" id="buttn3">Hydra Dynamo</li>
+                        <li class="btn activate" onclick="showImageSensitivity('scoutop','buttn1','btn')" id="buttn1">
+                            Sc0utOP</li>
+                        <li class="btn" onclick="showImageSensitivity('soul-mortal','buttn2','btn')" id="buttn2">Soul
+                            Mortal</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-dynamo','buttn3','btn')" id="buttn3">Hydra
+                            Dynamo</li>
                         <li class="btn" onclick="showImageSensitivity('athena','buttn4','btn')" id="buttn4">Athena</li>
-                        <li class="btn" onclick="showImageSensitivity('levinho','buttn5','btn')" id="buttn5">Levihno</li>
+                        <li class="btn" onclick="showImageSensitivity('levinho','buttn5','btn')" id="buttn5">Levihno
+                        </li>
                         <li class="btn" onclick="showImageSensitivity('sevou','buttn6','btn')" id="buttn6">Sevou</li>
-                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Hydra Danger</li>
-                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','buttn8','btn')" id="buttn8">Hydra Wrath</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Hydra
+                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-wrath','buttn8','btn')" id="buttn8">Hydra
+                            Wrath</li>
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
+                        <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
                         <img src="./img/background-3390802_1920.jpg" alt="">
@@ -799,15 +822,15 @@
         </div>
         </div>
     </section>
-<header>
-    <div class="bottom-navigation">
-            
-        <span style="color: #ccc"><i class="fa fa-home"></i></span>
-        <span style="color: red;"><i class="fa fa-youtube-play"></i></span>
-        <span style="color: #ccc"><i class="fa fa-caret-up"></i></span>
+    <header>
+        <div class="bottom-navigation">
 
-    </div>
-</header>
+            <span style="color: #ccc"><i class="fa fa-home"></i></span>
+            <span style="color: red;"><i class="fa fa-youtube-play"></i></span>
+            <span style="color: #ccc"><i class="fa fa-caret-up"></i></span>
+
+        </div>
+    </header>
 
 
     <script type="text/javascript">
