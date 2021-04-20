@@ -185,12 +185,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 1%;
             background-color: #ddd;
             transition: width .3s ease-in-out;
-        }
-        .drop-width{
-            width: 100vw;
         }
 
         #drop-content li {
@@ -201,10 +197,11 @@
             border: 1px solid #ddd;
             background: #ccc;
             list-style: none;
-            transition:width 1.5s ease;
+            transition: width 1.5s ease;
 
         }
-        #drop-content li:hover{
+
+        #drop-content li:hover {
             background-color: rgb(214, 210, 210);
             text-decoration: underline;
         }
@@ -320,7 +317,7 @@
             }
 
             #drop-content {
-                right: 12%;
+                margin: 50vh 5vh;
             }
         }
     </style>
@@ -448,7 +445,7 @@
                         <img src="./img/background-3390802_1920.jpg" alt="">
                     </div>
                 </div>
-                
+
 
             </div>
             <div class="pannel" id="free-fire">
@@ -978,18 +975,18 @@
 
         function showDropcon() {
             var conList = document.getElementById('drop-content');
-            var li=conList.getElementsByTagName('li');
+            var li = conList.getElementsByTagName('li');
             // console.log(conList.style.width)
 
             for (let i = 0; i < li.length; i++) {
                 const element = li[i];
-                element.style.width='300px';
-                
+                element.style.width = '300px';
+
             }
-            if (conList.style.width='0vw') {
+            if (conList.style.width = '0vw') {
                 conList.style.width = "100vw";
             }
-            else{
+            else {
                 conList.style.width = "0vw";
             }
 
