@@ -13,7 +13,8 @@
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -151,25 +152,68 @@
             display: block;
         }
 
-        .bottom-navigation{
+        .bottom-navigation {
             display: block;
             position: absolute;
             top: 22vh;
             right: 1vw;
-        } 
-        .bottom-navigation a .fa:hover{
-                color: yellow;
-                text-shadow: 3px 3px 3px rgb(182, 42, 42);
-                transition:.4s ease-out;
-            }
-            .bottom-navigation a .fa{
-                padding: 20px;
-                font-size: 45px;
-                color: rgb(194, 63, 63);
-            }
-            .bottom-navigation a:nth-child(3){
-                display: none;
-            }
+        }
+
+        .bottom-navigation a .fa:hover {
+            color: yellow;
+            text-shadow: 3px 3px 3px rgb(182, 42, 42);
+            transition: .4s ease-out;
+        }
+
+        .bottom-navigation a .fa {
+            padding: 20px;
+            font-size: 45px;
+            color: rgb(194, 63, 63);
+        }
+
+        .bottom-navigation a:nth-child(3) {
+            display: none;
+        }
+
+        #drop-content {
+            box-sizing: border-box;
+            /* border: 1px solid blue; */
+            width: 0vw;
+            height: 30vh;
+            overflow: auto;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1%;
+            background-color: #ddd;
+            transition: width .3s ease-in-out;
+        }
+        .drop-width{
+            width: 100vw;
+        }
+
+        #drop-content li {
+            display: block;
+            width: 0px;
+            margin: auto;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #ccc;
+            list-style: none;
+            transition:width 1.5s ease;
+
+        }
+        #drop-content li:hover{
+            background-color: rgb(214, 210, 210);
+            text-decoration: underline;
+        }
+
+        #drop-content li a {
+            text-decoration: none;
+            color: red;
+
+        }
 
         @media only screen and (max-width:768px) {
             .tabs {
@@ -216,7 +260,7 @@
 
             .images-of-senstivity-of-pubg-mobile img {
                 display: block;
-                position:relative;
+                position: relative;
                 margin: 0 auto;
                 height: 200px;
                 width: 90vw;
@@ -225,7 +269,7 @@
 
             .container .senitivity-of-pubg-mobile-gamer li {
                 text-align: center;
-                padding:13px 10px ;
+                padding: 13px 10px;
                 overflow: auto;
                 border: none;
                 border-right: 1px solid#333;
@@ -250,7 +294,7 @@
             .bottom-navigation {
                 /* border: 1px solid red; */
                 position: fixed;
-                top:100vh;
+                top: 100vh;
                 text-align: center;
                 display: block;
                 position: fixed;
@@ -260,24 +304,23 @@
 
             }
 
-            .bottom-navigation a .fa{
+            .bottom-navigation a .fa {
                 padding: 30px;
                 font-size: 45px;
                 color: rgb(194, 63, 63);
             }
-            .bottom-navigation a:nth-child(4){
+
+            .bottom-navigation a:nth-child(4) {
                 display: none;
             }
-            .bottom-navigation a:nth-child(3){
+
+            .bottom-navigation a:nth-child(3) {
                 color: blue;
                 display: inline;
             }
 
-        }
-
-        @media (min-width:348px) and (max-width:768px) {
-            .images-of-senstivity-of-pubg-mobile{
-                left: 8vw;
+            #drop-content {
+                right: 12%;
             }
         }
     </style>
@@ -405,6 +448,25 @@
                         <img src="./img/background-3390802_1920.jpg" alt="">
                     </div>
                 </div>
+                <div id="drop-content">
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+
+                </div>
+
             </div>
             <div class="pannel" id="free-fire">
                 <ul class="individual-info">
@@ -849,16 +911,16 @@
         </div>
         </div>
     </section>
-    <header>
+    <section>
         <div class="bottom-navigation">
 
-            <a style="color: #ccc"><i class="fa fa-home"></i></a>
-            <a style="color: red;"><i class="fa fa-youtube-play"></i></a>
-            <a style="color: #ccc"><i class="fa fa-caret-up"></i></a>
-            <a style="color: red"><i class="fa fa-sort-desc"></i></a>
+            <a><i class="fa fa-home"></i></a>
+            <a><i class="fa fa-youtube-play"></i></a>
+            <a onclick="showDropcon(this)"><i class="fa fa-caret-up"></i></a>
+            <a onclick="showDropcon(this)"><i class="fa fa-sort-desc"></i></a>
 
         </div>
-    </header>
+    </section>
 
 
     <script type="text/javascript">
@@ -910,6 +972,27 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
 
+
+        //Casceding dropdown
+
+        function showDropcon() {
+            var conList = document.getElementById('drop-content');
+            var li=conList.getElementsByTagName('li');
+            // console.log(conList.style.width)
+
+            for (let i = 0; i < li.length; i++) {
+                const element = li[i];
+                element.style.width='300px';
+                
+            }
+            if (conList.style.width='0vw') {
+                conList.style.width = "100vw";
+            }
+            else{
+                conList.style.width = "0vw";
+            }
+
+        }
     </script>
 
 </body>
