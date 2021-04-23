@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=IBM+Plex+Serif:wght@200&display=swap"
+        rel="stylesheet">
     <title>Gaming Info</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+            /* font-family: 'Baloo Bhai 2', cursive; */
+            /* font-family: 'IBM Plex Serif', serif; */
+            box-sizing: border-box;
         }
 
         body {
@@ -23,17 +31,22 @@
         }
 
         .active {
-            background-color: #5fbd62;
-
+            /* background-color: #5fbd62; */
+            background: linear-gradient(#333, pink);
+            color: #ccc;
         }
 
         .tabs {
             overflow: hidden;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background: linear-gradient(green, pink);
+
+            /* background-color: #f1f1f1; */
+
         }
 
-        .tabs button {
+        .tabs li {
+            list-style: none;
             float: left;
             border: none;
             outline: none;
@@ -44,7 +57,9 @@
         }
 
         .inspirational-quotes {
+            /* background-color: rgb(245, 203, 210); */
             height: fit-content;
+            /* width: 120vw; */
             overflow: hidden;
             text-align: center;
         }
@@ -70,13 +85,14 @@
             display: inline-block;
             transition: background-color 0.6s ease;
         }
+
         /* .container .senitivity-of-pubg-mobile-gamer{
             position: absolute;
             top: 65vh;
             transform: translateY(-50%);
         } */
         .container .senitivity-of-pubg-mobile-gamer li {
-            background-color: rgb(202, 199, 199);
+            /* background-color: rgb(202, 199, 199); */
             border: 1px solid white;
             padding: 20px 0px;
             list-style: none;
@@ -85,16 +101,15 @@
             /* padding-bottom: 0px; */
         }
 
-        .container .senitivity-of-pubg-mobile-gamer li:hover {
-            background-color: #ddd;
-        }
-
         .container .senitivity-of-pubg-mobile-gamer li.activate {
-            background-color: red;
+            background: linear-gradient(#333, pink);
+            color: #ccc;
         }
 
         .images-of-senstivity-of-pubg-mobile {
             box-sizing: border-box;
+            box-shadow: 5px 5px 10px #333;
+
             display: none;
             overflow: auto;
             white-space: nowrap;
@@ -103,30 +118,57 @@
             right: 20vw;
             width: 500px;
             height: 300px;
-            /* border: 2px solid yellow; */
+            border: 10px solid rgb(29, 29, 18);
+            border-bottom: none;
             /* width: fit-content; */
             transform: translateY(-50%);
         }
 
 
+        /* ////Scroll bar styling */
+
+        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar {
+            height: 5px;
+            background-color: green;
+        }
+
+        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px;
+            border-radius: 10px;
+        }
+
         .images-of-senstivity-of-pubg-mobile img {
             box-sizing: border-box;
             width: 500px;
-            height: 300px;
+            height: 280px;
             display: inline-block;
-            border: 1px solid rgb(226, 221, 221);
-            padding: 5px;
+            border: none;
+            /* padding: 5px; */
 
         }
 
         .pannel {
             border: 1px solid rgb(245, 242, 242);
             box-shadow: 1px 1px 9px 5px;
-            background-color: #ccc;
+            /* background-color: #ccc; */
+            background: linear-gradient(pink, rgb(238, 75, 238));
             display: none;
             margin: 7px;
             height: 80vh;
             padding: 6px 12px;
+            /* overflow: auto; */
+            /* white-space: nowrap; */
+        }
+
+        .pannel h2 {
+
+            text-shadow: 4px 4px 9px #333;
+
         }
 
         .pannel .individual-info {
@@ -136,7 +178,7 @@
         }
 
         .pannel .individual-info a:hover {
-            background-color: rgb(186, 167, 202);
+            background: linear-gradient(#333, pink);
         }
 
         .pannel .individual-info a {
@@ -153,7 +195,10 @@
             display: block;
         }
 
-        #scoutop ,#ajjubhai,#iferg,#godpraveenyt{
+        #scoutop,
+        #ajjubhai,
+        #iferg,
+        #godpraveenyt {
             display: block;
         }
 
@@ -173,7 +218,7 @@
         .bottom-navigation a .fa {
             padding: 20px;
             font-size: 45px;
-            color: rgb(194, 63, 63);
+            color: hotpink;
         }
 
         .bottom-navigation a:nth-child(3) {
@@ -217,14 +262,54 @@
 
         }
 
+        /* short news section */
+        .overview {
+            /* border: 1px solid red; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overview img {
+            width: 10vw;
+            height: 10vh;
+            display: inline;
+        }
+
+        .overview a {
+            display: inline;
+            float: right;
+            position: relative;
+            right: 30vw;
+            width: fit-content;
+            text-decoration: none;
+            /* border: 1px solid green; */
+            color: #333;
+        }
+
+        #contact-me {
+            position: relative;
+            border: 2px solid #ccc;
+            box-shadow: 5px 5px 17px #000;
+        }
+
+        #contact-me input {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .footer {
+            /* border: 2px solid red; */
+            background: #4caf50;
+            padding: 15px;
+        }
+
         @media only screen and (max-width:768px) {
             .tabs {
                 width: 119vw;
             }
 
             .pannel {
-                margin: 3px auto;
-                margin: 3px;
                 position: absolute;
                 text-align: center;
                 overflow: auto;
@@ -233,6 +318,7 @@
                 overflow: auto;
                 /* white-space: nowrap; */
             }
+
 
             .pannel .individual-info {
                 display: block;
@@ -255,7 +341,8 @@
                 overflow: auto;
                 height: 75vh;
                 white-space: nowrap;
-                /* border: 2px solid rgb(224, 17, 86); */
+                border-right: none;
+                border-bottom: 10px solid;
                 width: fit-content;
                 margin-bottom: 40px;
             }
@@ -295,13 +382,14 @@
 
             .bottom-navigation {
                 /* border: 1px solid red; */
-                position: fixed;
-                top: 100vh;
+                background: #000;
+                position: sticky;
+                top: 105vh;
                 text-align: center;
                 display: block;
                 position: fixed;
                 left: 50%;
-                width: 100vw;
+                width: 120vw;
                 transform: translateX(-50%);
 
             }
@@ -324,6 +412,37 @@
             #drop-content {
                 margin: 30vh 5vh;
             }
+
+            .overview {
+                position: relative;
+                top: 105vh;
+                display: block;
+                margin: 0 auto;
+                width: 119vw;
+            }
+
+            .overview a {
+
+                right: 25vw;
+            }
+
+            #contact-me {
+                position: relative;
+                top: 107vh;
+                width: 119vw;
+
+            }
+
+            .footer {
+                position: relative;
+                width: 119vw;
+                top: 110vh;
+                padding-bottom: 100px;
+
+            }
+            .footer a .fa{
+                margin: 15px;
+            }
         }
     </style>
 </head>
@@ -332,15 +451,14 @@
 
     <div class="tabs">
 
-        <button class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')"
-            id="button1">PUBG-Mobile</button>
-        <button class="bttn" onclick="show_para('free-fire','button2','bttn')" id="button2">FREE FIRE</button>
-        <button class="bttn" onclick="show_para('call-of-duty-mobile','button3','bttn')" id="button3">COD</button>
-        <button class="bttn" onclick="show_para('pubg-mobile-lite','button4','bttn')" id="button4">PUBGM Lite</button>
-        <button class="bttn" onclick="show_para('glitches','button5','bttn')" id="button5">GLITCHES</button>
-        <button class="bttn" onclick="show_para('facts','button6','bttn')" id="button6">FACTS</button>
-        <button class="bttn" onclick="show_para('tricks','button7','bttn')" id="button7">TRICK</button>
-        <button class="bttn" onclick="show_para('sico-mobile','button8','bttn')" id="button8">SICO</button>
+        <li class="active bttn" onclick="show_para('pubg-mobile','button1','bttn')" id="button1">PUBG-Mobile</button>
+        <li class="bttn" onclick="show_para('free-fire','button2','bttn')" id="button2">FREE FIRE</li>
+        <li class="bttn" onclick="show_para('call-of-duty-mobile','button3','bttn')" id="button3">COD</li>
+        <li class="bttn" onclick="show_para('pubg-mobile-lite','button4','bttn')" id="button4">PUBGM Lite</li>
+        <li class="bttn" onclick="show_para('glitches','button5','bttn')" id="button5">GLITCHES</li>
+        <li class="bttn" onclick="show_para('facts','button6','bttn')" id="button6">FACTS</li>
+        <li class="bttn" onclick="show_para('tricks','button7','bttn')" id="button7">TRICK</li>
+        <li class="bttn" onclick="show_para('sico-mobile','button8','bttn')" id="button8">SICO</li>
 
     </div>
     <div class="inspirational-quotes">
@@ -348,24 +466,24 @@
             <span class="author-name" style="float:right;color:black;">-James Altucher</span>
         </p>
     </div>
-    <div class="inspirational-quotes">
-        <section id="quotes-section">
+    <section>
+        <div class="inspirational-quotes">
             <p>Life is a game.We must keep playing the game.The more we play ,the more we will understand the game of
                 Life. <br>
                 <span class="author-name" style="float:right;color:black;">-Lailah Gifty Akita</span>
             </p>
-    </div>
-    <div class="inspirational-quotes">
-        <p>You never win any games ,you don't play. <br>
-            <span class="author-name" style="float:right;color:black;">-Lailah Gifty Akita</span>
-        </p>
-    </div>
+        </div>
+        <div class="inspirational-quotes">
+            <p>You never win any games ,you don't play. <br>
+                <span class="author-name" style="float:right;color:black;">-Lailah Gifty Akita</span>
+            </p>
+        </div>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+        <div style="text-align:center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
 
     </section>
 
@@ -469,13 +587,16 @@
                 <h2>Sensitivity of Some famous FREE-FIRE gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li class="btn activate" onclick="showImageSensitivity('ajjubhai','buttn11','btn')" id="buttn11">
+                        <li class="btn activate" onclick="showImageSensitivity('ajjubhai','buttn11','btn')"
+                            id="buttn11">
                             Ajju Bhai (Total Gaming)</li>
-                        <li class="btn" onclick="showImageSensitivity('raistar','buttn21','btn')" id="buttn21">Rai Star</li>
-                        <li class="btn" onclick="showImageSensitivity('sksabir','buttn31','btn')" id="buttn31">Hydra
-                            Dynamo</li>
-                        <li class="btn" onclick="showImageSensitivity('tsglegend','buttn41','btn')" id="buttn41">Athena</li>
-                        <li class="btn" onclick="showImageSensitivity('vincenzo','buttn51','btn')" id="buttn51">Levihno
+                        <li class="btn" onclick="showImageSensitivity('raistar','buttn21','btn')" id="buttn21">Rai Star
+                        </li>
+                        <li class="btn" onclick="showImageSensitivity('sksabir','buttn31','btn')" id="buttn31">Sk Sabir
+                        </li>
+                        <li class="btn" onclick="showImageSensitivity('tsglegend','buttn41','btn')" id="buttn41">TSG
+                            Legend</li>
+                        <li class="btn" onclick="showImageSensitivity('vincenzo','buttn51','btn')" id="buttn51">Vincenzo
                         </li>
 
                     </div>
@@ -489,41 +610,31 @@
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="raistar">
-                        <img src="./pubgmobile/mortal/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/5.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/6.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/7.jpg" alt="SensitivityImg">
+                        <img src="./freefire/raistar/1.jpg" alt="SensitivityImg">
+                        <img src="./freefire/raistar/2.jpg" alt="SensitivityImg">
+                        <img src="./freefire/raistar/3.jpg" alt="SensitivityImg">
+                        <img src="./freefire/raistar/4.jpg" alt="SensitivityImg">
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="sksabir">
-                        <img src="./pubgmobile/dynamo/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/5.jpg" alt="SensitivityImg">
+                        <img src="./freefire/sksabir/1.jpg" alt="SensitivityImg">
+                        <img src="./freefire/sksabir/2.jpg" alt="SensitivityImg">
+                        <img src="./freefire/sksabir/3.jpg" alt="SensitivityImg">
+                        <img src="./freefire/sksabir/4.jpg" alt="SensitivityImg">
+                        <img src="./freefire/sksabir/5.jpg" alt="SensitivityImg">
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="tsglegend">
-                        <img src="./pubgmobile/athena/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/5.jpg" alt="SensitivityImg">
+                        <img src="./freefire/tsglegendgarena/1.jpg" alt="SensitivityImg">
+                        <img src="./freefire/tsglegendgarena/2.jpg" alt="SensitivityImg">
+                        <img src="./freefire/tsglegendgarena/3.jpg" alt="SensitivityImg">
+                        <img src="./freefire/tsglegendgarena/4.jpg" alt="SensitivityImg">
+                        <img src="./freefire/tsglegendgarena/5.jpg" alt="SensitivityImg">
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="vincenzo">
-                        <img src="./pubgmobile/levinho/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/5.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/6.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/7.jpg" alt="SensitivityImg">
-
+                        <img src="./freefire/vincenzo/1.jpg" alt="SensitivityImg">
                     </div>
-                    
+
                 </div>
 
 
@@ -538,57 +649,70 @@
                 <h2>Sensitivity of Some famous COD gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li class="btn activate" onclick="showImageSensitivity('iferg','buttn12','btn')" id="buttn12">iFerg</li>
-                        <li class="btn" onclick="showImageSensitivity('jokesta','buttn22','btn')" id="buttn22">Jokesta</li>
-                        <li class="btn" onclick="showImageSensitivity('godzly','buttn32','btn')" id="buttn32">Godzly</li>
-                        <li class="btn" onclick="showImageSensitivity('hawksnest','buttn42','btn')" id="buttn42">Hawk's Nest</li>
-                        <li class="btn" onclick="showImageSensitivity('knifesios','buttn52','btn')" id="buttn52">Knife's ios</li>                 </li>
+                        <li class="btn activate" onclick="showImageSensitivity('iferg','buttn12','btn')" id="buttn12">
+                            iFerg</li>
+                        <li class="btn" onclick="showImageSensitivity('jokesta','buttn22','btn')" id="buttn22">Jokesta
+                        </li>
+                        <li class="btn" onclick="showImageSensitivity('godzly','buttn32','btn')" id="buttn32">Godzly
+                        </li>
+                        <li class="btn" onclick="showImageSensitivity('hawksnest','buttn42','btn')" id="buttn42">Hawk's
+                            Nest</li>
+                        <li class="btn" onclick="showImageSensitivity('knifesios','buttn52','btn')" id="buttn52">Knife's
+                            ios</li>
+                        </li>
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="iferg">
-                        <img src="./freefire/ajjubhai/1.jpg" alt="SensitivityImg">
-                        <img src="./freefire/ajjubhai/2.jpg" alt="SensitivityImg">
-                        <img src="./freefire/ajjubhai/3.jpg" alt="SensitivityImg">
-                        <img src="./freefire/ajjubhai/4.jpg" alt="SensitivityImg">
-                        <img src="./freefire/ajjubhai/5.jpg" alt="SensitivityImg">
-                        <img src="./freefire/ajjubhai/6.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/1.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/2.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/3.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/4.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/5.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/6.jpg" alt="SensitivityImg">
+                        <img src="./cod/iferg/7.jpg" alt="SensitivityImg">
+
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="jokesta">
-                        <img src="./pubgmobile/mortal/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/5.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/6.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/mortal/7.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/1.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/2.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/3.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/4.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/5.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/6.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/7.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/8.jpg" alt="SensitivityImg">
+                        <img src="./cod/jokesta/9.jpg" alt="SensitivityImg">
+
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="godzly">
-                        <img src="./pubgmobile/dynamo/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/dynamo/5.jpg" alt="SensitivityImg">
+                        <img src="./cod/godzly/1.jpg" alt="SensitivityImg">
+                        <img src="./cod/godzly/2.jpg" alt="SensitivityImg">
+                        <img src="./cod/godzly/3.jpg" alt="SensitivityImg">
+                        <img src="./cod/godzly/4.jpg" alt="SensitivityImg">
+                        <img src="./cod/godzly/5.jpg" alt="SensitivityImg">
+
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="hawksnest">
-                        <img src="./pubgmobile/athena/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/athena/5.jpg" alt="SensitivityImg">
+                        <img src="./cod/hawksnest/1.jpg" alt="SensitivityImg">
+                        <img src="./cod/hawksnest/2.jpg" alt="SensitivityImg">
+                        <img src="./cod/hawksnest/3.jpg" alt="SensitivityImg">
+                        <img src="./cod/hawksnest/4.jpg" alt="SensitivityImg">
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="knifesios">
-                        <img src="./pubgmobile/levinho/1.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/2.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/3.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/4.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/5.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/6.jpg" alt="SensitivityImg">
-                        <img src="./pubgmobile/levinho/7.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/1.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/2.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/3.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/4.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/5.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/6.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/7.jpg" alt="SensitivityImg">
+                        <img src="./cod/knifesios/8.jpg" alt="SensitivityImg">
 
-                    </div>  
+
+                    </div>
                 </div>
             </div>
 
@@ -601,17 +725,21 @@
                 <h2>Sensitivity of Some famous PUBGM-Lite gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li class="btn activate" onclick="showImageSensitivity('godpraveenyt','buttn13','btn')" id="buttn13">God Praveen</li>
-                        <li class="btn" onclick="showImageSensitivity('technogamerz','buttn23','btn')" id="buttn23">Techno Gamerz</li>
-                        <li class="btn" onclick="showImageSensitivity('melody','buttn33','btn')" id="buttn33">Melody</li>
-                        <li class="btn" onclick="showImageSensitivity('helptrick','buttn43','btn')" id="buttn43">Help Trick</li>
+                        <li class="btn activate" onclick="showImageSensitivity('godpraveenyt','buttn13','btn')"
+                            id="buttn13">God Praveen</li>
+                        <li class="btn" onclick="showImageSensitivity('technogamerz','buttn23','btn')" id="buttn23">
+                            Techno Gamerz</li>
+                        <li class="btn" onclick="showImageSensitivity('melody','buttn33','btn')" id="buttn33">Melody
+                        </li>
+                        <li class="btn" onclick="showImageSensitivity('helptrick','buttn43','btn')" id="buttn43">Help
+                            Trick</li>
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="technogamerz">
                         <img src="./pubgmlite/tecnogamerzplite/1.jpg" alt="SensitivityImg">
                         <img src="./pubgmlite/tecnogamerzplite/2.jpg" alt="SensitivityImg">
                         <img src="./pubgmlite/tecnogamerzplite/3.jpg" alt="SensitivityImg">
-     
+
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="godpraveenyt">
@@ -628,7 +756,7 @@
                         <img src="./pubgmlite/melody/4.jpg" alt="SensitivityImg">
                         <img src="./pubgmlite/melody/5.jpg" alt="SensitivityImg">
                         <img src="./pubgmlite/melody/6.jpg" alt="SensitivityImg">
-             
+
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="helptrick">
                         <img src="./pubgmlite/helptrick/1.jpg" alt="SensitivityImg">
@@ -636,7 +764,7 @@
                         <img src="./pubgmlite/helptrick/3.jpg" alt="SensitivityImg">
                         <img src="./pubgmlite/helptrick/4.jpg" alt="SensitivityImg">
 
-                    </div> 
+                    </div>
 
                 </div>
             </div>
@@ -649,10 +777,13 @@
                 <h2>Sensitivity of Some famous PUBGM-Lite gamer</h2><br>
                 <div class="images-of-player">
                     <div class="senitivity-of-pubg-mobile-gamer">
-                        <li class="btn activate" onclick="showImageSensitivity('godpraveenyt','buttn13','btn')" id="buttn13">SICO</li>
-                        <li class="btn" onclick="showImageSensitivity('technogamerz','buttn23','btn')" id="buttn23">SICO</li>
+                        <li class="btn activate" onclick="showImageSensitivity('godpraveenyt','buttn13','btn')"
+                            id="buttn13">SICO</li>
+                        <li class="btn" onclick="showImageSensitivity('technogamerz','buttn23','btn')" id="buttn23">SICO
+                        </li>
                         <li class="btn" onclick="showImageSensitivity('melody','buttn33','btn')" id="buttn33">SICO</li>
-                        <li class="btn" onclick="showImageSensitivity('helptrick','buttn43','btn')" id="buttn43">SICO</li>
+                        <li class="btn" onclick="showImageSensitivity('helptrick','buttn43','btn')" id="buttn43">SICO
+                        </li>
 
                     </div>
                 </div>
@@ -660,7 +791,7 @@
             </div>
         </div>
 
-           
+
     </section>
 
     <section>
@@ -692,6 +823,47 @@
         </div>
     </section>
 
+    <section>
+        <div class="overview">
+            <hr>
+            <div class="news-links">
+                <img src="./img/play.jpg" alt="hotnews">
+                <a href="">This is news link</a>
+            </div>
+            <hr>
+            <div class="news-links">
+                <img src="./img/play.jpg" alt="hotnews">
+                <a href="">This is news link</a>
+            </div>
+            <hr>
+            <div class="news-links">
+                <img src="./img/play.jpg" alt="hotnews">
+                <a href="">This is news link</a>
+            </div>
+            <hr>
+            <div class="more">
+                <a href="">Show More...</a>
+            </div><br>
+        </div>
+
+    </section>
+
+
+    <div id="contact-me">
+        <h2>Contact Us</h2>
+        <input type="text" name="" placeholder="Enter your Name">
+        <input type="text" name="" placeholder="Enter your E-mail">
+        <textarea name="" id="" cols="25" rows="5" placeholder="Enter your Message here..."></textarea><br>
+        <button>Submit</button>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>Pankaj Kumar Pvt.Ltd. All the copyrights &copy; reserves</p>
+            <a href=""style="color:red;margin: 0 10px;"><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+        </div>
+    </footer>
 
     <script type="text/javascript">
 
