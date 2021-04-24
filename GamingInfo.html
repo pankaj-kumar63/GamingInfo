@@ -108,7 +108,8 @@
 
         .images-of-senstivity-of-pubg-mobile {
             box-sizing: border-box;
-            box-shadow: 5px 5px 10px #333;
+            box-shadow: 5px 5px 20px 5px #333;
+            
 
             display: none;
             overflow: auto;
@@ -118,7 +119,7 @@
             right: 20vw;
             width: 500px;
             height: 300px;
-            border: 10px solid rgb(29, 29, 18);
+            border: 8px solid rgb(29, 29, 18);
             border-bottom: none;
             /* width: fit-content; */
             transform: translateY(-50%);
@@ -267,16 +268,17 @@
             /* border: 1px solid red; */
             text-align: center;
             align-items: center;
+            background:radial-gradient(green, pink);
             justify-content: center;
         }
 
-        .overview img {
+         .news-links img {
             width: 10vw;
             height: 10vh;
             display: inline;
         }
 
-        .overview a {
+        .news-links a {
             display: inline;
             float: right;
             position: relative;
@@ -291,6 +293,7 @@
             position: relative;
             border: 2px solid #ccc;
             box-shadow: 5px 5px 17px #000;
+            background: radial-gradient(pink,green);
         }
 
         #contact-me input {
@@ -315,7 +318,7 @@
                 overflow: auto;
                 height: 100vh;
                 width: 115vw;
-                overflow: auto;
+                /* overflow: auto; */
                 /* white-space: nowrap; */
             }
 
@@ -383,10 +386,10 @@
             .bottom-navigation {
                 /* border: 1px solid red; */
                 background: #000;
-                position: sticky;
-                top: 100vh;
+
+                top: 105vh;
                 text-align: center;
-                display: none;
+                display: block;
                 position: fixed;
                 left: 50%;
                 width: 120vw;
@@ -415,20 +418,20 @@
 
             .overview {
                 position: relative;
-                top: 105vh;
+                top: 102vh;
                 display: block;
                 margin: 0 auto;
                 width: 119vw;
             }
 
-            .overview a {
+            .overview .news-links a {
 
                 right: 25vw;
             }
 
             #contact-me {
                 position: relative;
-                top: 107vh;
+                top: 103vh;
                 width: 119vw;
                 
 
@@ -439,10 +442,34 @@
 
             .footer {
                 position: relative;
+                background: transparent;
                 width: 119vw;
-                top: 109vh;
-                padding-bottom: 10px;
+                top: 105vh;
+                padding-bottom: 150px;
+                /* border: 1px solid green; */
 
+
+            }
+            .footer .blank_div1{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 150px;
+                width: 60vw;
+                /* border: 1px solid red; */
+                background: linear-gradient(pink,magenta);
+                z-index: -1;
+
+            }
+            .blank_div2{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 60vw;
+                height: 150px;
+                /* border: 1px solid blue; */
+                background: linear-gradient(pink,green);
+                z-index: -1;
             }
 
             .footer a .fa {
@@ -851,6 +878,9 @@
             </div><br>
         </div>
 
+
+
+
     </section>
 
 
@@ -864,11 +894,18 @@
 
     <footer>
         <div class="footer">
-            <p>Pankaj Kumar Pvt.Ltd. All the copyrights &copy; reserves</p>
+            <div class="blank_div1"></div>
+            <div class="blank_div2"></div>
+            <p>Pankaj Kumar Pvt.Ltd. All the copyrights &copy; reserved</p>
             <a href="" style="color:red;margin: 0 10px;"><i class="fa fa-instagram"></i></a>
             <a href=""><i class="fa fa-facebook"></i></a>
         </div>
     </footer>
+
+
+
+
+
 
     <script type="text/javascript">
 
