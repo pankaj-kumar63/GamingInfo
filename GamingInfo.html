@@ -203,28 +203,8 @@
             display: block;
         }
 
-        .bottom-navigation {
-            display: block;
-            position: absolute;
-            top: 22vh;
-            right: 1vw;
-        }
 
-        .bottom-navigation a .fa:hover {
-            color: yellow;
-            text-shadow: 3px 3px 3px rgb(182, 42, 42);
-            transition: .4s ease-out;
-        }
 
-        .bottom-navigation a .fa {
-            padding: 20px;
-            font-size: 45px;
-            color: hotpink;
-        }
-
-        .bottom-navigation a:nth-child(3) {
-            display: none;
-        }
 
         #drop-content {
             box-sizing: border-box;
@@ -306,6 +286,28 @@
             background: #4caf50;
             padding: 15px;
         }
+        .bottom-navigation {
+            display: block;
+            position: absolute;
+            top: 22vh;
+            right: 1vw;
+        }
+
+        .bottom-navigation a .fa:hover {
+            color: yellow;
+            text-shadow: 3px 3px 3px rgb(182, 42, 42);
+            transition: .4s ease-out;
+        }
+
+        .bottom-navigation a .fa {
+            padding: 20px;
+            font-size: 45px;
+            color: rgb(194, 63, 63);
+        }
+
+        .bottom-navigation a:nth-child(3) {
+            display: none;
+        }
 
         @media only screen and (max-width:768px) {
             .tabs {
@@ -383,35 +385,6 @@
                 padding-top: 4px;
             }
 
-            .bottom-navigation {
-                /* border: 1px solid red; */
-                background: #000;
-
-                top: 105vh;
-                text-align: center;
-                display: block;
-                position: fixed;
-                left: 50%;
-                width: 120vw;
-                transform: translateX(-50%);
-
-            }
-
-            .bottom-navigation a .fa {
-                padding: 30px;
-                font-size: 45px;
-                color: rgb(194, 63, 63);
-            }
-
-            .bottom-navigation a:nth-child(4) {
-                display: none;
-            }
-
-            .bottom-navigation a:nth-child(3) {
-                color: blue;
-                display: inline;
-            }
-
             #drop-content {
                 margin: 30vh 5vh;
             }
@@ -445,7 +418,7 @@
                 background: transparent;
                 width: 119vw;
                 top: 105vh;
-                padding-bottom: 150px;
+                padding-bottom: 20px;
                 /* border: 1px solid green; */
 
 
@@ -474,6 +447,33 @@
 
             .footer a .fa {
                 margin: 15px;
+            }
+            .bottom-navigation {
+                /* border: 1px solid red; */
+                position: fixed;
+                top: 100vh;
+                text-align: center;
+                display: block;
+                position: fixed;
+                left: 50%;
+                width: 100vw;
+                transform: translateX(-50%);
+
+            }
+
+            .bottom-navigation a .fa {
+                padding: 30px;
+                font-size: 45px;
+                color: rgb(194, 63, 63);
+            }
+
+            .bottom-navigation a:nth-child(4) {
+                display: none;
+            }
+
+            .bottom-navigation a:nth-child(3) {
+                color: blue;
+                display: inline;
             }
         }
     </style>
@@ -827,14 +827,6 @@
     </section>
 
     <section>
-        <div class="bottom-navigation">
-
-            <a><i class="fa fa-home"></i></a>
-            <a><i class="fa fa-youtube-play"></i></a>
-            <a onclick="showDropcon(this)"><i class="fa fa-caret-up"></i></a>
-            <a onclick="showDropcon(this)"><i class="fa fa-sort-desc"></i></a>
-
-        </div>
         <div id="drop-content">
             <li><a href="">Link</a></li>
             <li><a href="">Link</a></li>
@@ -902,6 +894,13 @@
         </div>
     </footer>
 
+
+<div class="bottom-navigation">
+    <a><i class="fa fa-home"></i></a>
+    <a><i class="fa fa-youtube-play"></i></a>
+    <a onclick="showDropcon(this)"><i class="fa fa-caret-up"></i></a>
+    <a onclick="showDropcon(this)"><i class="fa fa-sort-desc"></i></a>
+</div>
 
 
 
