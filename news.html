@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation-menu {
+            width: 100vmax;
+            position: sticky;
+            background-image: linear-gradient(#6c6cff, #6b3636);
+            /* border: 2px solid green; */
+            padding: 10px;
+        }
+
+        .home-and-logo {
+            display: inline-block;
+            width: fit-content;
+            /* border: 2px solid yellow; */
+        }
+
+        .home-and-logo .fa {
+
+            font-size: 25px;
+            padding: 0 30px;
+        }
+
+        .fa:hover,
+        .fa:active {
+            color: white;
+            transition: .3s ease-out;
+        }
+
+        .search-box {
+            display: block;
+            position: relative;
+            float: right;
+            right: 5vw;
+            /* border: 2px solid red; */
+        }
+
+        .all-news-collection {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            /* border: 2px solid green; */
+            text-align: center;
+        }
+
+        .news-article {
+
+            padding: 10px;
+            border: 1px solid #333;
+            box-shadow: 1px 1px 7px;
+            border-right: none;
+            border-left: none;
+            margin: 10px;
+        }
+
+        .news-article h1 {
+            font-size: 1.5rem;
+            width: 350px;
+            height: auto;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+            display: block;
+        }
+
+        .news-article p {
+            width: 500px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .news-article img {
+            width: 250px;
+            height: 200px;
+        }
+        @media screen and (max-width:873px) {
+            .all-news-collection{
+                display: block;
+                position: relative;
+                /* border: 2px solid green; */
+                /* overflow: auto; */
+                width: 100vmax;
+            }
+            .news-article p{
+                width: 250px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="navigation-menu">
+            <div class="home-and-logo">
+                <i class="fa fa-home"></i>
+                <img src="" alt="logo" class="logo">
+            </div>
+            <div class="search-box">
+                <input type="text" name="" id="" placeholder="&#128270; Search here...">
+            </div>
+
+        </div>
+
+    </header>
+
+    <section>
+        <div class="all-news-collection">
+
+            <div class="news-article" id="news-article-6">
+
+                <h1 onclick="show_article('news-article-6')">This is todays News Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Totam, nihil?</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiaelorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi harum quaerat,
+                    pariatur ratione culpa asperiores fugit maiores aspernatur nihil, natus ex beatae doloribus nisi!
+                    Maxime delectus rem repellendus consequatur nesciunt quas molestiae laborum! Enim, reiciendis
+                    nostrum error corrupti tempore consequatur. Perspiciatis at temporibus sed. Voluptatem ducimus culpa
+                    ipsam ea quos. quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-5">
+
+                <h1 onclick="show_article('news-article-5')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-4">
+
+                <h1 onclick="show_article('news-article-4')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-3">
+
+                <h1 onclick="show_article('news-article-3')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-2">
+
+                <h1 onclick="show_article('news-article-2')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-1">
+
+                <h1 onclick="show_article('news-article-1')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+
+        </div>
+    </section>
+    <script type='text/javascript'>
+
+        function show_article(newsArticleId) {
+            var news = document.getElementById(newsArticleId);
+            var p = news.getElementsByTagName('p');
+            p[0].style.display = 'block';
+        }
+
+
+    </script>
+</body>
+
+</html>

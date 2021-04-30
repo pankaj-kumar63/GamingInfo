@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>pubg lite glitches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            /* border: 2px solid green; */
+            padding: 25px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(blue,#ccc);
+        }
+
+        .navbar li {
+            /* border: 1px solid white; */
+            font-size: 1rem;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            font-size: 1rem;
+
+            text-decoration: none;
+            color: yellow;
+            font-weight: 600;
+        }
+
+        .all-news-collection {
+            /* border: 2px solid red; */
+
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            /* border: 2px solid green; */
+            text-align: center;
+        }
+
+        .news-article {
+            padding: 10px;
+            border: 1px solid blue;
+            box-shadow: 1px 1px 7px;
+            border-right: none;
+            border-left: none;
+            margin: 10px;
+        }
+
+        .news-article h1 {
+            font-size: 1.5rem;
+            width: 350px;
+            height: auto;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+            display: block;
+        }
+
+        .news-article p {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .news-article img {
+            width: 250px;
+            height: 200px;
+        }
+        @media screen and (max-width:768px) {
+
+            .navbar{
+                overflow: hidden;
+                z-index: -1;
+                width: 100vmax;
+                position: fixed;
+
+            }
+            .all-news-collection{
+                display: block;
+                position: relative;
+                /* border: 2px solid green; */
+                /* overflow: auto; */
+                width: 100vmax;
+            }
+            .news-article p{
+                width: 250px;
+            }
+            .news-article{
+                width:340px ;
+                margin: 80px auto;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/home"><img src="" alt="GamingInfo.online"></a>
+            <li><a href="/home">Home</a></li>
+        </nav><br>
+
+    </header>
+
+    <section>
+        <div class="all-news-collection">
+
+            <div class="news-article" id="news-article-6">
+
+                <h1 onclick="show_article('news-article-6')">This is todays News Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Totam, nihil?</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiaelorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi harum quaerat,
+                    pariatur ratione culpa asperiores fugit maiores aspernatur nihil, natus ex beatae doloribus nisi!
+                    Maxime delectus rem repellendus consequatur nesciunt quas molestiae laborum! Enim, reiciendis
+                    nostrum error corrupti tempore consequatur. Perspiciatis at temporibus sed. Voluptatem ducimus culpa
+                    ipsam ea quos. quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-5">
+
+                <h1 onclick="show_article('news-article-5')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-4">
+
+                <h1 onclick="show_article('news-article-4')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-3">
+
+                <h1 onclick="show_article('news-article-3')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-2">
+
+                <h1 onclick="show_article('news-article-2')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+            <div class="news-article" id="news-article-1">
+
+                <h1 onclick="show_article('news-article-1')">This is todays News</h1><br>
+                <img src="./img/bg.jpg" alt="News">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, enim voluptatum. Porro deserunt ab
+                    maiores molestiae quam fugit iste aperiam dolorem recusandae, sint repellat sit officia et
+                    architecto mollitia. Exercitationem!</p>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
