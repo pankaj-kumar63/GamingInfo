@@ -7,476 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=IBM+Plex+Serif:wght@200&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="./info.css">
+    <link rel="stylesheet" href="./phone.css">
     <title>Gaming Info</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            /* font-family: 'Baloo Bhai 2', cursive; */
-            /* font-family: 'IBM Plex Serif', serif; */
-            box-sizing: border-box;
-        }
-
-        body {
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            /* margin: 5px; */
-            padding: 1px;
-        }
-
-        .active {
-            /* background-color: #5fbd62; */
-            background: linear-gradient(#333, pink);
-            color: #ccc;
-        }
-
-        .tabs {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background: linear-gradient(green, pink);
-
-            /* background-color: #f1f1f1; */
-
-        }
-
-        .tabs li {
-            list-style: none;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: .3s;
-            font-size: 17px;
-        }
-
-        .inspirational-quotes {
-            /* background-color: rgb(245, 203, 210); */
-            height: fit-content;
-            /* width: 120vw; */
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .inspirational-quotes p {
-            display: block;
-            margin: 0 auto;
-            padding: 30px;
-            width: 85vw;
-            color: red;
-        }
-
-        /* //slideing-quotes-section// */
-
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        /* .container .senitivity-of-pubg-mobile-gamer{
-            position: absolute;
-            top: 65vh;
-            transform: translateY(-50%);
-        } */
-        .container .senitivity-of-pubg-mobile-gamer li {
-            /* background-color: rgb(202, 199, 199); */
-            border: 1px solid white;
-            padding: 20px 0px;
-            list-style: none;
-            width: 80px;
-            text-align: center;
-            /* padding-bottom: 0px; */
-        }
-
-        .container .senitivity-of-pubg-mobile-gamer li.activate {
-            background: linear-gradient(#333, pink);
-            color: #ccc;
-        }
-
-        .images-of-senstivity-of-pubg-mobile {
-            box-sizing: border-box;
-            box-shadow: 5px 5px 20px 5px #333;
-            
-
-            display: none;
-            overflow: auto;
-            white-space: nowrap;
-            position: absolute;
-            top: 65vh;
-            right: 20vw;
-            width: 500px;
-            height: 300px;
-            border: 8px solid rgb(29, 29, 18);
-            border-bottom: none;
-            /* width: fit-content; */
-            transform: translateY(-50%);
-        }
-
-
-        /* ////Scroll bar styling */
-
-        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar {
-            height: 5px;
-            background-color: green;
-        }
-
-        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar-thumb {
-            background-color: black;
-            border-radius: 10px;
-        }
-
-        .images-of-senstivity-of-pubg-mobile::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px;
-            border-radius: 10px;
-        }
-
-        .images-of-senstivity-of-pubg-mobile img {
-            box-sizing: border-box;
-            width: 500px;
-            height: 280px;
-            display: inline-block;
-            border: none;
-            /* padding: 5px; */
-
-        }
-
-        .pannel {
-            border: 1px solid rgb(245, 242, 242);
-            box-shadow: 1px 1px 9px 5px;
-            /* background-color: #ccc; */
-            background: linear-gradient(pink, rgb(238, 75, 238));
-            display: none;
-            margin: 7px;
-            height: 80vh;
-            padding: 6px 12px;
-            /* overflow: auto; */
-            /* white-space: nowrap; */
-        }
-
-        .pannel h2 {
-
-            text-shadow: 4px 4px 9px #333;
-
-        }
-
-        .pannel .individual-info {
-            /* border: 2px solid red; */
-            width: fit-content;
-            padding: 10px 0px;
-        }
-
-        .pannel .individual-info a:hover {
-            background: linear-gradient(#333, pink);
-        }
-
-        .pannel .individual-info a {
-            text-align: center;
-            padding: 10px 23px;
-            /* padding-left:0px; */
-            text-decoration: none;
-            color: red;
-            /* border: 2px solid green; */
-        }
-
-
-        #pubg-mobile {
-            display: block;
-        }
-
-        #scoutop,
-        #ajjubhai,
-        #iferg,
-        #godpraveenyt {
-            display: block;
-        }
-
-
-
-
-        #drop-content {
-            box-sizing: border-box;
-            /* border: 1px solid blue; */
-            width: 0vw;
-            height: 30vh;
-            overflow: auto;
-            white-space: nowrap;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #ddd;
-            transition: width .1s ease-in-out;
-        }
-
-        #drop-content li {
-            display: block;
-            width: 0px;
-            margin: auto;
-            text-align: center;
-            border: 1px solid #ddd;
-            background: #ccc;
-            list-style: none;
-            transition: width 1s ease;
-
-        }
-
-        #drop-content li:hover {
-            background-color: rgb(214, 210, 210);
-            text-decoration: underline;
-        }
-
-        #drop-content li a {
-            text-decoration: none;
-            color: red;
-
-        }
-
-        /* short news section */
-        .overview {
-            /* border: 1px solid red; */
-            text-align: center;
-            align-items: center;
-            /* background: radial-gradient(#ccc,#333); */
-            justify-content: center;
-        }
-
-         .news-links img {
-            width: 10vw;
-            height: 10vh;
-            display: inline;
-        }
-
-        .news-links a {
-            display: inline;
-            float: right;
-            position: relative;
-            right: 30vw;
-            width: fit-content;
-            text-decoration: none;
-            /* border: 1px solid green; */
-            color: #333;
-        }
-
-        #contact-me {
-            position: relative;
-            border: 2px solid #ccc;
-            box-shadow: 5px 5px 17px #000;
-            /* background: radial-gradient(#ccc,#333); */
-        }
-
-        #contact-me input {
-            display: block;
-            margin: 0 auto;
-        }
-
-        .footer {
-            /* border: 2px solid red; */
-            background: #4caf50;
-            padding: 15px;
-        }
-        .bottom-navigation {
-            display: block;
-            position: absolute;
-            top: 27vh;
-            right: 1vw;
-        }
-
-        .bottom-navigation a .fa:hover {
-            color: yellow;
-            text-shadow: 3px 3px 3px rgb(182, 42, 42);
-            transition: .4s ease-out;
-        }
-
-        .bottom-navigation a .fa {
-            padding: 20px;
-            font-size: 45px;
-            color: rgb(194, 63, 63);
-        }
-
-        .bottom-navigation a:nth-child(3) {
-            display: none;
-        }
-
-        @media only screen and (max-width:768px) {
-            .tabs {
-                width: 119vw;
-            }
-
-            .pannel {
-                position: absolute;
-                text-align: center;
-                overflow: auto;
-                height: 120vh;
-                width: 115vw;
-                /* overflow: auto; */
-                /* white-space: nowrap; */
-            }
-
-
-            .pannel .individual-info {
-                display: block;
-                margin: 0 auto;
-            }
-
-            .pannel .individual-info a {
-                padding: 5px;
-            }
-
-            .images-of-senstivity-of-pubg-mobile {
-                box-sizing: border-box;
-                align-items: center;
-                margin: 30px;
-                /*/changes/*/
-                position: relative;
-                top: 35vh;
-                /*/changes/*/
-                left: 2vw;
-                overflow: auto;
-                height: 75vh;
-                white-space: nowrap;
-                border-right: none;
-                border-bottom: 10px solid;
-                width: fit-content;
-                margin-bottom: 40px;
-            }
-
-            .images-of-senstivity-of-pubg-mobile img {
-                display: block;
-                position: relative;
-                margin: 0 auto;
-                height: 200px;
-                width: 90vw;
-                padding: 0;
-            }
-
-            .container .senitivity-of-pubg-mobile-gamer li {
-                text-align: center;
-                padding: 13px 10px;
-                overflow: auto;
-                border: none;
-                border-right: 1px solid#333;
-                display: inline;
-                overflow: auto;
-                white-space: nowrap;
-            }
-
-            .container .senitivity-of-pubg-mobile-gamer {
-                box-sizing: border-box;
-                position: relative;
-                display: block;
-                border: 1px solid black;
-                margin: 25px auto;
-                width: 300px;
-                height: 33px;
-                overflow: auto;
-                white-space: nowrap;
-                padding-top: 4px;
-            }
-
-            #drop-content {
-                margin: 30vh 5vh;
-            }
-
-            .overview {
-                position: relative;
-                top: 124vh;
-                display: block;
-                margin: 0 auto;
-                width: 119vw;
-            }
-
-            .overview .news-links a {
-
-                right: 25vw;
-            }
-
-            #contact-me {
-                position: relative;
-                top: 123vh;
-                width: 119vw;
-                
-
-            }
-            #contact-me input,textarea{
-                background: #ddd;
-            }
-
-            .footer {
-                position: relative;
-                background: transparent;
-                width: 119vw;
-                top: 123vh;
-                padding-bottom: 20px;
-                /* border: 1px solid green; */
-
-
-            }
-            .footer .blank_div1{
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                height: 150px;
-                width: 60vw;
-                /* border: 1px solid red; */
-                background: linear-gradient(white,navy);
-                z-index: -1;
-
-            }
-            .blank_div2{
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                width: 60vw;
-                height: 150px;
-                /* border: 1px solid blue; */
-                background: linear-gradient(white,#000);
-                z-index: -1;
-            }
-
-            .footer a .fa {
-                margin: 15px;
-            }
-            .bottom-navigation {
-                /* border: 1px solid red; */
-                position: fixed;
-                top: 105vh;
-                text-align: center;
-                display: block;
-                position: fixed;
-                left: 50%;
-                width: 100vw;
-                transform: translateX(-50%);
-
-            }
-
-            .bottom-navigation a .fa {
-                padding: 30px;
-                font-size: 45px;
-                color: rgb(194, 63, 63);
-            }
-
-            .bottom-navigation a:nth-child(4) {
-                display: none;
-            }
-
-            .bottom-navigation a:nth-child(3) {
-                color: blue;
-                display: inline;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -487,10 +20,8 @@
         <li class="bttn" onclick="show_para('free-fire','button2','bttn')" id="button2">FREE FIRE</li>
         <li class="bttn" onclick="show_para('call-of-duty-mobile','button3','bttn')" id="button3">COD</li>
         <li class="bttn" onclick="show_para('pubg-mobile-lite','button4','bttn')" id="button4">PUBGM Lite</li>
-        <li class="bttn" onclick="show_para('glitches','button5','bttn')" id="button5">GLITCHES</li>
-        <li class="bttn" onclick="show_para('facts','button6','bttn')" id="button6">FACTS</li>
-        <li class="bttn" onclick="show_para('tricks','button7','bttn')" id="button7">TRICK</li>
-        <li class="bttn" onclick="show_para('sico-mobile','button8','bttn')" id="button8">SICO</li>
+        <li class="bttn" onclick="show_para('sico-mobile','button5','bttn')" id="button5">SICO</li>
+        <li><a style="text-decoration: none;color: black;" href="/news">NEWS</a></li>
 
     </div>
     <div class="inspirational-quotes">
@@ -525,9 +56,9 @@
 
             <div class="pannel" id="pubg-mobile">
                 <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="./news.html">News</a>
-                    <a href="">Download Link</a>
+                    <a href="/pubgGlitches">Glitches</a>
+                    <a href="/pubgTricks">Tricks</a>
+                    <a href="/pubgDownload">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous PUBG mobile gamer</h2><br>
                 <div class="images-of-player">
@@ -541,9 +72,11 @@
                         <li class="btn" onclick="showImageSensitivity('athena','buttn4','btn')" id="buttn4">Athena</li>
                         <li class="btn" onclick="showImageSensitivity('levinho','buttn5','btn')" id="buttn5">Levihno
                         </li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Hydra Danger</li>
                         <li class="btn" onclick="showImageSensitivity('sevou','buttn6','btn')" id="buttn6">Sevou</li>
-                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Hydra
-                            Danger</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Gamexpro</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Antaryami</li>
+                        <li class="btn" onclick="showImageSensitivity('hydra-danger','buttn7','btn')" id="buttn7">Ruppo</li></li>
 
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="scoutop">
@@ -612,9 +145,9 @@
 
             <div class="pannel" id="free-fire">
                 <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="./news.html">News</a>
-                    <a href="">Download Link</a>
+                    <a href="/freeGlitches">Glitches</a>
+                    <a href="/freeTricks">Tricks</a>
+                    <a href="/freeDownload">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous FREE-FIRE gamer</h2><br>
                 <div class="images-of-player">
@@ -652,8 +185,6 @@
                         <img src="./freefire/sksabir/1.jpg" alt="SensitivityImg">
                         <img src="./freefire/sksabir/2.jpg" alt="SensitivityImg">
                         <img src="./freefire/sksabir/3.jpg" alt="SensitivityImg">
-                        <img src="./freefire/sksabir/4.jpg" alt="SensitivityImg">
-                        <img src="./freefire/sksabir/5.jpg" alt="SensitivityImg">
                     </div>
                     <div class="images-of-senstivity-of-pubg-mobile" id="tsglegend">
                         <img src="./freefire/tsglegendgarena/1.jpg" alt="SensitivityImg">
@@ -674,9 +205,9 @@
 
             <div class="pannel" id="call-of-duty-mobile">
                 <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="./news.html">News</a>
-                    <a href="">Download Link</a>
+                    <a href="/codGlitches">Glitches</a>
+                    <a href="/codTricks">Tricks</a>
+                    <a href="/codDownload">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous COD gamer</h2><br>
                 <div class="images-of-player">
@@ -750,9 +281,9 @@
 
             <div class="pannel" id="pubg-mobile-lite">
                 <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="./news.html">News</a>
-                    <a href="">Download Link</a>
+                    <a href="/pliteGlitches">Glitches</a>
+                    <a href="/pliteTricks">Tricks</a>
+                    <a href="/pliteDownload">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous PUBGM-Lite gamer</h2><br>
                 <div class="images-of-player">
@@ -802,9 +333,9 @@
             </div>
             <div class="pannel" id="sico-mobile">
                 <ul class="individual-info">
-                    <a href="">Updates</a>
-                    <a href="./news.html">News</a>
-                    <a href="">Download Link</a>
+                    <a href="/sicoGlitches">Glitches</a>
+                    <a href="/sicoTricks">Tricks</a>
+                    <a href="/sicoDownload">Download Link</a>
                 </ul>
                 <h2>Sensitivity of Some famous PUBGM-Lite gamer</h2><br>
                 <div class="images-of-player">
@@ -828,7 +359,7 @@
 
     <section>
         <div id="drop-content">
-            <li><a href="">Link</a></li>
+            <li><a href="/news">News</a></li>
             <li><a href="">Link</a></li>
             <li><a href="">Link</a></li>
             <li><a href="">Link</a></li>
@@ -852,21 +383,21 @@
             <hr>
             <div class="news-links">
                 <img src="./img/play.jpg" alt="hotnews">
-                <a href="">This is news link</a>
+                <a href="/news">This is news link</a>
             </div>
             <hr>
             <div class="news-links">
                 <img src="./img/play.jpg" alt="hotnews">
-                <a href="">This is news link</a>
+                <a href="/news">This is news link</a>
             </div>
             <hr>
             <div class="news-links">
                 <img src="./img/play.jpg" alt="hotnews">
-                <a href="">This is news link</a>
+                <a href="/news">This is news link</a>
             </div>
             <hr>
             <div class="more">
-                <a href="">Show More...</a>
+                <a href="/news">Show More...</a>
             </div><br>
         </div>
 
@@ -878,10 +409,14 @@
 
     <div id="contact-me">
         <h2>Contact Us</h2>
-        <input type="text" name="" placeholder="Enter your Name">
-        <input type="text" name="" placeholder="Enter your E-mail">
-        <textarea name="" id="" cols="25" rows="5" placeholder="Enter your Message here..."></textarea><br>
-        <button>Submit</button>
+        <form action="/GamingInfo"method="post">
+
+            <input type="text" name="name" placeholder="Enter your Name">
+            <input type="text" name="email" placeholder="Enter your E-mail">
+            <textarea name="message" cols="25" rows="5" placeholder="Enter your Message here..."></textarea><br>
+            <button type="submit">Submit</button>
+
+        </form>
     </div>
 
     <footer>
@@ -889,18 +424,18 @@
             <div class="blank_div1"></div>
             <div class="blank_div2"></div>
             <p>Pankaj Kumar Pvt.Ltd. All the copyrights &copy; reserved</p>
-            <a href="" style="color:red;margin: 0 10px;"><i class="fa fa-instagram"></i></a>
-            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href="/instagram" style="color:red;margin: 0 10px;"><i class="fa fa-instagram"></i></a>
+            <a href="/facebook"><i class="fa fa-facebook"></i></a>
         </div>
     </footer>
 
 
-<div class="bottom-navigation">
-    <a><i class="fa fa-home"></i></a>
-    <a><i class="fa fa-youtube-play"></i></a>
-    <a onclick="showDropcon(this)"><i class="fa fa-caret-up"></i></a>
-    <a onclick="showDropcon(this)"><i class="fa fa-sort-desc"></i></a>
-</div>
+    <div class="bottom-navigation">
+        <a href="/home"><i class="fa fa-home"></i></a>
+        <a href="/video"><i class="fa fa-youtube-play"></i></a>
+        <a  onclick="showDropcon(this)"><i class="fa fa-caret-up"></i></a>
+        <a  onclick="showDropcon(this)"><i class="fa fa-sort-desc"></i></a>
+    </div>
 
 
 
